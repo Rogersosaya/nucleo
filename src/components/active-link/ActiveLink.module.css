@@ -1,0 +1,7 @@
+.link {
+  @apply  hover:text-purple-600 mr-2 transition-all;
+}
+
+.active-link {
+  @apply underline decoration-purple-600 underline-offset-4 decoration-2;
+}
