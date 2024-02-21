@@ -6,7 +6,7 @@ function MissionVision() {
     <div className="2xl:container 2xl:mx-auto lg:py-12 lg:px-20 md:py-9 md:px-6 py-4 px-4">
       <div className="flex flex-col lg:flex-row justify-between gap-8">
         <div className="w-full lg:w-8/12 ">
-          <Image src="/images/dino.png" width={600} height={200} alt="dino"/>
+          <Image src="/images/dino.png" width={600} height={200} alt="dino" style={{filter: 'drop-shadow(10px 7px 10px purple)'}}/>
           
         </div>
         <div className="w-full lg:w-5/12 flex flex-col justify-center">

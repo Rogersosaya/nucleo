@@ -18,3 +18,4 @@ No olvidar agregar el directorio a tailwind.config.css
 
 un component "use client" puede tener como hijos server components pero no importar server componentes, entonces el NEXTUI se puede usar tranuilamente 
 
+ <[object Object]>: si me sale error por un componente externo como Nextui probar colocando "use client"  

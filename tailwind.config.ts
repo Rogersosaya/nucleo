@@ -10,6 +10,7 @@ const config: Config = {
     "./src/areas/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"
   ],
+  darkMode: "class",
   theme: {
     extend: {
       backgroundImage: {
@@ -19,7 +20,7 @@ const config: Config = {
       },
     },
   },
-  darkMode: "class",
+  
   plugins: [nextui()]
 
 };

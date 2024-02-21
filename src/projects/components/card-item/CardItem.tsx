@@ -40,7 +40,7 @@ function CardItem({ name, description, areas, members }: Props) {
           Nombre del proyecto
         </h4>
         <p className="block mb-8 font-sans text-base antialiased font-normal leading-relaxed text-gray-700">
-          Detalles del proyecto
+        Tiene como objetivo producir y difundir contenido académico, cultural.
         </p>
         <div className="flex items-center -space-x-3">
           {

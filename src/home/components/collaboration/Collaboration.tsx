@@ -13,7 +13,7 @@ const urlCollaborations = [
 function Collaboration() {
   return (
     <div className="mb-12">
-      <Subtitle subtitle='Colaboraciones' description='Uniendo fuerzas para crear impacto cultural....' />
+      <Subtitle subtitle='Confían en nosotros' description='Uniendo fuerzas para crear impacto cultural....' />
       
       <Marquee>
         {

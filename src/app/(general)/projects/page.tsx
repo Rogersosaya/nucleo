@@ -1,6 +1,11 @@
+import CardGrid from "@/projects/components/card-grid/CardGrid"
+import Search from "@/components/search/Search"
 function projectsPage() {
   return (
-    <div>projectsPage</div>
+    <>
+    <Search/>
+    <CardGrid/>
+    </>
   )
 }
 
