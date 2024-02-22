@@ -29,7 +29,7 @@ function Achievements() {
       <div className="flex justify-center flex-wrap">
         {
           achievements.map(achievement =>{
-            return <CardAnimate {...achievement}  />
+            return <CardAnimate key={achievement.title} {...achievement}  />
           })
         }
         

@@ -1,63 +1,71 @@
-import React from "react";
+
 import CardItem from "../card-item/CardItem";
 
-const projects = [
-  {
-    name: "proyecto1",
-    description:
-      "Descripción 1 Descripción 1Descripción 1Descripción 1Descripción 1",
-    areas: [
-      { name: "AREA DE SISTEMAS" },
-      { name: "AREA DE MARKETING" },
-      { name: "AREA DE LOGÍSTICA" },
-    ],
-    members: [
+import { Project } from "@/interfaces/project.interface";
+
+
+interface Props{
+  projects?: Project[]
+ }
+// const projects = [
+ 
+//   {
+//     name: "proyecto1",
+//     description:
+//       "Descripción 1 Descripción 1Descripción 1Descripción 1Descripción 1",
+//     areas: [
+//       { name: "AREA DE SISTEMAS" },
+//       { name: "AREA DE MARKETING" },
+//       { name: "AREA DE LOGÍSTICA" },
+//     ],
+//     members: [
       
-      {
-        url: "/images/testimonials/jairo.jpg",
-      },
-      {
-        url: "/images/testimonials/leonardo.jpg",
-      },
-    ],
-  },
-  {
-    name: "proyecto2",
-    description:
-      "Descripción 1 Descripción 1Descripción 1Descripción 1Descripción 1",
-    areas: [
-      { name: "AREA DE SISTEMAS" },
-      { name: "AREA DE MARKETING" },
-      { name: "AREA DE LOGÍSTICA" },
-    ],
-    members: [
-      {
-        url: "/images/testimonials/alfredo.jpg",
-      },
-      {
-        url: "/images/testimonials/elias.png",
-      },
-      {
-        url: "/images/testimonials/yucra.png",
-      },
-      {
-        url: "/images/testimonials/gavino.jpg",
-      },
-      {
-        url: "/images/testimonials/jairo.jpg",
-      },
-      {
-        url: "/images/testimonials/leonardo.jpg",
-      },
-    ],
-  },
+//       {
+//         url: "/members/jairo.jpg",
+//       },
+//       {
+//         url: "/members/leonardo.jpg",
+//       },
+//     ],
+//   },
+//   {
+//     name: "proyecto2",
+//     description:
+//       "Descripción 1 Descripción 1Descripción 1Descripción 1Descripción 1",
+//     areas: [
+//       { name: "AREA DE SISTEMAS" },
+//       { name: "AREA DE MARKETING" },
+//       { name: "AREA DE LOGÍSTICA" },
+//     ],
+//     members: [
+//       {
+//         url: "/members/alfredo.jpg",
+//       },
+//       {
+//         url: "/members/elias.png",
+//       },
+//       {
+//         url: "/members/yucra.png",
+//       },
+//       {
+//         url: "/members/gavino.jpg",
+//       },
+//       {
+//         url: "/members/jairo.jpg",
+//       },
+//       {
+//         url: "/members/leonardo.jpg",
+//       },
+//     ],
+//   },
   
-];
-function CardGrid() {
+// ];
+async function CardGrid({projects}: Props) {
+  
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2">
-      {projects.map((project) => {
-        return <CardItem {...project} />;
+    <div className="grid lg:grid-cols-4 grid-cols-2 lg:w-48">
+      {projects?.map((project) => {
+        return <CardItem key={project.name} {...project} />;
       })}
     </div>
   );

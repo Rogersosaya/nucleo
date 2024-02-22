@@ -1,0 +1,65 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+/// The underlying table does not contain a valid unique identifier and can therefore currently not be handled by Prisma Client.
+
+model Project {
+  id          String @id @default(uuid())
+  name        String
+  summary     String
+  description String
+  url         String
+}
+
+model Member {
+  id          String       @id @default(uuid())
+  name        String
+  career      String
+  url         String
+  testimonial Testimonial?
+}
+
+model Testimonial {
+  id       String @id @default(uuid())
+  content  String
+  member   Member @relation(fields: [memberId], references: [id])
+  memberId String @unique
+}
+
+model Area {
+  id         String      @id @default(uuid())
+  name       String
+  summary    String
+  url        String
+  objectives Objective[]
+  tasks  Task[]
+  subareas   SubArea[] 
+}
+
+model SubArea {
+  id          String @id @default(uuid())
+  name        String
+  description String
+  area        Area   @relation(fields: [areaId], references: [id])
+  areaId      String 
+}
+
+model Objective {
+  id          String @id @default(uuid())
+  description String
+  area        Area   @relation(fields: [areaId], references: [id])
+  areaId      String 
+}
+
+model Task {
+  id          String @id @default(uuid())
+  description String
+  area        Area   @relation(fields: [areaId], references: [id])
+  areaId      String 
+}

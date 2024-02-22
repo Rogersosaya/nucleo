@@ -8,12 +8,14 @@ interface PropsAreas {
 }
 interface Props {
   name: string;
+  summary: string;
   description: string;
-  areas: PropsAreas[];
-  members: PropsMembers[];
+  url: string;
+  // areas: PropsAreas[];
+  // members: PropsMembers[];
 }
 
-function CardItem({ name, description, areas, members }: Props) {
+function CardItem({ name,summary, description,url}: Props) {
   return (
     <div className="relative flex bg-clip-border rounded-xl bg-white text-gray-700 shadow-md  flex-row mx-2 my-4">
       <div className="relative m-0 overflow-hidden text-gray-700 bg-white rounded-r-none bg-clip-border rounded-xl shrink-0">
@@ -26,26 +28,26 @@ function CardItem({ name, description, areas, members }: Props) {
         />
       </div>
       <div className="p-6">
-        <div className="mb-4">
+        {/* <div className="mb-4">
           {areas.map((area) => {
             return (
-              <div className="inline-block  font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-gray-700 uppercase mr-4">
+              <div key={area.name} className="inline-block  font-sans text-base antialiased font-semibold leading-relaxed tracking-normal text-gray-700 uppercase mr-4">
                 {area.name}
               </div>
             );
           })}
-        </div>
+        </div> */}
 
         <h4 className="block mb-2 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
-          Nombre del proyecto
+          {name}
         </h4>
         <p className="block mb-8 font-sans text-base antialiased font-normal leading-relaxed text-gray-700">
-        Tiene como objetivo producir y difundir contenido académico, cultural.
+        {summary}
         </p>
-        <div className="flex items-center -space-x-3">
+        {/* <div className="flex items-center -space-x-3">
           {
             members.slice(0,3).map((member) =>{
-              return <Image
+              return <Image key={member.url}
               src={member.url}
               width={20}
               height={20}
@@ -62,7 +64,7 @@ function CardItem({ name, description, areas, members }: Props) {
           </div>
           }
           
-        </div>
+        </div> */}
         <a href="#" className="inline-block">
           <button
             className="flex items-center gap-2 px-6 py-3 font-sans text-xs font-bold text-center text-gray-900 uppercase align-middle transition-all rounded-lg select-none disabled:opacity-50 disabled:shadow-none disabled:pointer-events-none hover:bg-gray-900/10 active:bg-gray-900/20"

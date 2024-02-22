@@ -18,7 +18,7 @@ function Collaboration() {
       <Marquee>
         {
             urlCollaborations.map((urlCollaboration) => {
-                return (<CollaborationItem urlCollaboration={urlCollaboration} />)
+                return (<CollaborationItem key={urlCollaboration} urlCollaboration={urlCollaboration} />)
             })
         }
         
