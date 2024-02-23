@@ -3,6 +3,7 @@ interface SeedSubArea {
   name: string;
   description: string;
 }
+
 interface SeedObjective {
   description: string;
 }
@@ -24,10 +25,15 @@ interface SeedProject {
   description: string;
   url: string;
 }
+interface SeedTestimonial{
+  content: string;
+}
 interface SeedMember {
   name: string;
   career: string;
+  role: string;
   url: string;
+  testimonial: SeedTestimonial;
 }
 
 interface SeedData {
@@ -35,53 +41,70 @@ interface SeedData {
   areas: SeedArea[];
   projects: SeedProject[];
 }
+
 export const initialData: SeedData = {
   members: [
     {
       name: "Elias Ortiz",
-      career: "Ingeniria de Sistemas",
-      url: "/images/members/elias.png",
+      career: "Ingenieria de Sistemas",
+      role: "Ex Miembro de Sistemas",
+      url: "/members/elias.png",
+      testimonial: {content: "El Centro Cultural Núcleo me dio las herramientas y la confianza necesaria para enfrentar desafíos en el mundo laboral. Aprendí a pensar de manera crítica, a resolver problemas de forma creativa y a nunca conformarme con menos de lo mejor."}
     },
     {
       name: "Anthony Calderón",
-      career: "Ingeniria de Sistemas",
-      url: "/images/members/anthony.png",
+      career: "Ingenieria de Sistemas",
+      role: "Miembro de Marketing",
+      url: "/members/anthony.png",
+      testimonial: {content: "Ser parte del Centro Cultural Núcleo me ha brindado la oportunidad de desarrollar habilidades de marketing estratégico y creativo. Cada campaña y estrategia que implementamos tiene como objetivo promover nuestros valores y atraer a nuevos talentos que quieran marcar la diferencia en la sociedad."}
     },
     {
       name: "Alfredo Quispe",
-      career: "Ingeniria de Sistemas",
-      url: "/images/members/alfredo.jpg",
+      career: "Ingenieria de Sistemas",
+      role: "Miembro de Sistemas",
+      url: "/members/alfredo.jpg",
+      testimonial: {content: "Como miembro del área de sistemas, he tenido la oportunidad de aplicar mis conocimientos en tecnología para innovar y mejorar los procesos internos del Centro Cultural Núcleo. Es gratificante ver cómo nuestras soluciones contribuyen al éxito de la organización."}
     },
     {
       name: "Gavino Geldres",
-      career: "Ingeniria de Sistemas",
-      url: "/images/members/gavino.jpg",
+      career: "Ingenieria de Sistemas",
+      role: "Presidente",
+      url: "/members/gavino.jpg",
+      testimonial: {content: "Ser parte del Centro Cultural Núcleo ha sido una experiencia transformadora. Aquí he aprendido a liderar con integridad, a inspirar a otros y a trabajar incansablemente por el éxito de nuestros proyectos. Es un honor ser parte de esta comunidad de líderes en constante crecimiento."}
     },
     {
       name: "Jairo Kazuo",
-      career: "Ingeniria de Sistemas",
-      url: "/images/members/jairo.jpg",
+      career: "Ingenieria de Sistemas",
+      role: "Miembro de Relaciones Públicas",
+      url: "/members/jairo.jpg",
+      testimonial: {content: "El Centro Cultural Núcleo me ha permitido expandir mi red de contactos y mejorar mis habilidades de comunicación. Cada evento y proyecto en el que participamos es una oportunidad para fortalecer la imagen de nuestra facultad y generar impacto en la sociedad."}
     },
     {
       name: "Jordan Laureano",
-      career: "Ingeniria de Sistemas",
-      url: "/images/members/jordan.jpg",
+      career: "Ingenieria de Sistemas",
+      role: "Miembro de Sistemas",
+      url: "/members/jordan.jpg",
+      testimonial: {content: "El Centro Cultural Núcleo no solo me ha brindado oportunidades para desarrollar habilidades de organización y planificación, sino que también me ha enseñado el valor del trabajo en equipo y la importancia de la excelencia en cada proyecto."}
     },
     {
       name: "Leonardo Ramirez",
-      career: "Ingeniria de Sistemas",
-      url: "/images/members/leonardo.jpg",
+      career: "Ingenieria de Sistemas",
+      role: "Director de Marketing",
+      url: "/members/leonardo.jpg",
+      testimonial: {content: "Formar parte del Centro Cultural Núcleo ha sido clave en mi desarrollo profesional. Aquí he podido aplicar mis conocimientos en marketing de una manera práctica y colaborativa, contribuyendo al éxito de nuestra institución y al crecimiento de mis habilidades."}
     },
     {
       name: "Jean Yucra",
-      career: "Ingeniria de Sistemas",
-      url: "/images/members/yucra.png",
+      career: "Ingenieria de Sistemas",
+      role: "Miembro de Sistemas ",
+      url: "/members/yucra.png",
+      testimonial: {content: "En el Centro Cultural Núcleo, he encontrado un espacio donde puedo combinar mi pasión por la tecnología con mi interés por el servicio a la comunidad. Aquí, cada línea de código que escribimos tiene un propósito mayor: impulsar el cambio y la excelencia."}
     },
   ],
   areas: [
     {
       name: "Investigación",
-      url: "/images/area.jpg",
+      url: "/area.jpg",
       summary:
         "¡En la UNI, la investigación comienza desde el primer día! Te preparamos para brillar en la Feria de Proyectos con asesoramiento personalizado.",
       
@@ -131,7 +154,7 @@ export const initialData: SeedData = {
     },
     {
       name: "Project Management Office",
-      url: "/images/area.jpg",
+      url: "/area.jpg",
       summary:
         "¡Haz que tus proyectos destaquen! Nos encargamos de gestionar, alinear y cultivar futuros éxitos. Únete a nuestro emocionante viaje de gestión de proyectos.",
       objectives: [
@@ -171,7 +194,7 @@ export const initialData: SeedData = {
     },
     {
       name: "Marketing",
-      url: "/images/area.jpg",
+      url: "/area.jpg",
       summary:
         "¡Conéctate con nosotros! Fortalecemos nuestras redes sociales para aumentar seguidores y generar alianzas. Además, brindamos apoyo en diseño para eventos y proyectos.",
       
@@ -216,7 +239,7 @@ export const initialData: SeedData = {
     },
     {
       name: "Relaciones públicas",
-      url: "/images/area.jpg",
+      url: "/area.jpg",
       summary:
         "¡Conectamos oportunidades y cuidamos nuestra imagen! Gestionamos alianzas estratégicas y la Bolsa de Trabajo, asegurando beneficios para nuestros miembros.",
       
@@ -249,7 +272,7 @@ export const initialData: SeedData = {
     },
     {
       name: "Industrial",
-      url: "/images/area.jpg",
+      url: "/area.jpg",
       summary:
         "Desarrollamos habilidades y abrimos puertas en ingeniería industrial. Eventos, programas y conexiones profesionales te esperan aquí.",
       
@@ -268,7 +291,7 @@ export const initialData: SeedData = {
     },
     {
       name: "Sistemas",
-      url: "/images/area.jpg",
+      url: "/area.jpg",
       summary:
         "Desarrollamos habilidades y abrimos puertas en ingeniería de sistemas. Eventos, programas y conexiones profesionales te esperan aquí.",
       
@@ -287,7 +310,7 @@ export const initialData: SeedData = {
     },
     {
       name: "Gestión de Talento Humano",
-      url: "/images/area.jpg",
+      url: "/area.jpg",
       summary:
         "Impulsamos la identificación y participación en nuestro centro, reclutando talentos y promoviendo un ambiente respetuoso y armonioso.",
       
@@ -313,7 +336,7 @@ export const initialData: SeedData = {
         "Aprendizaje autodidacta y competencia sana para potenciar a nuestros miembros como futuros profesionales.!",
       description:
         "Proyecto que busca que los miembros de las áreas de Núcleo aprendan de manera autodidacta distintas herramientas necesarias para su desempeño como futuros profesionales a través de la competencia sana",
-      url: "/images/area.jpg",
+      url: "/projects/nucleopower.jpg",
     },
     {
       name: "NúcleoTube",
@@ -321,7 +344,7 @@ export const initialData: SeedData = {
         "Contenido variado en YouTube para estudiantes y público interesado. Sumérgete en el aprendizaje y entretenimiento.",
       description:
         "Tiene como objetivo producir y difundir contenido académico, cultural,informativo y entretenido para estudiantes universitarios y público interesado a través de la plataforma digital YOUTUBE.",
-      url: "/images/area.jpg",
+      url: "/projects/nucleotube.jpg",
     },
     {
       name: "Yachaywasi",
@@ -329,7 +352,7 @@ export const initialData: SeedData = {
         "¡Sé profesor de matemáticas y ciencias para estudiantes de secundaria! Comparte tu conocimiento y ayuda a otros a aprender de manera interactiva",
       description:
         "Dirigido a estudiantes de educación secundaria, próximos a culminar su etapa escolar que buscan seguir aprendiendo de manera interactiva acerca diversos temas relacionados matemáticas y ciencias, los profesores son estudiantes de la FIIS que dominan los temas presentados en las clases y que previamente han sido capacitados para cumplir de manera óptima su labor.",
-      url: "/images/area.jpg",
+      url: "/projects/yachaywasi.jpg",
     },
     {
       name: "English Club",
@@ -337,7 +360,7 @@ export const initialData: SeedData = {
         "Participa y mejora tu nivel de inglés junto a compañeros de distintas carreras y universidades",
       description:
         "Proyecto que busca la práctica continua del idioma inglés en estudiantes de distintas carreras y universidades mediante clases teóricas y dinámicas brindadas por estudiantes de la FIIS, realizando un debido seguimiento separando a los asistentes de acuerdo al nivel de inglés que presentan mediante evaluaciones y su participación en las sesiones llevadas a cabo durante el ciclo académico",
-      url: "/images/area.jpg",
+      url: "/projects/englishclub.jpg",
     },
     {
       name: "Debate tu Pensamiento",
@@ -345,14 +368,14 @@ export const initialData: SeedData = {
         "Promueve el desarrollo de habilidades comunicativas y pensamiento crítico. ¡Participa para expresar y defender tu punto de vista y fomentar la tolerancia",
       description:
         "Proyecto que busca mejorar el desarrollo de habilidades comunicativas y pensamiento crítico en la comunidad FIIS, de manera que se invite a cada participante a que exprese y defienda su punto de vista frente a otro, con el fin de persuadirlo, y a la vez plantee preguntas a este último. Además, colabora en la personalidad (expresarse de forma correcta), fomenta la tolerancia (respetar otras posturas) y ayuda a estar constantemente informado.",
-      url: "/images/area.jpg",
+      url: "/projects/debate.jpg",
     },
     {
       name: "EcoFIIS",
       summary:
         "Proyecto que busca concientizar a la comunidad FIIS sobre la crisis climática global; a través del reciclaje, la reducción de desechos, de uso de energía eléctrica y de recursos hídricos",
       description: "dfsfs",
-      url: "/images/area.jpg",
+      url: "/projects/ecofiis.jpg",
     },
   ],
 };

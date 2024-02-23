@@ -5,7 +5,7 @@ import {
   Pagination,
   Scrollbar,
   A11y,
-  Autoplay,
+  Autoplay
 } from "swiper/modules";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
@@ -15,62 +15,7 @@ import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
 import AreasHomeItem from "@/home/components/areas-home-list/AreasHomeItem";
 
-const areas = [
-    {
-      name: "Marketing1",
-      url: "/images/area.jpg",
-      summary:
-        "Comparte y recibe conocimiento para impulsar tu estrategia de marketing en nuestra comunidad de ideas.",
-    },
-    {
-      name: "Marketing2",
-      url: "/images/area.jpg",
-      summary:
-        "Comparte y recibe conocimiento para impulsar tu estrategia de marketing en nuestra comunidad de ideas.",
-    },
-    {
-      name: "Marketing3",
-      url: "/images/area.jpg",
-      summary:
-        "Comparte y recibe conocimiento para impulsar tu estrategia de marketing en nuestra comunidad de ideas.",
-    },
-    {
-      name: "Marketing4",
-      url: "/images/area.jpg",
-      summary:
-        "Comparte y recibe conocimiento para impulsar tu estrategia de marketing en nuestra comunidad de ideas.",
-    },
-    {
-      name: "Marketing5",
-      url: "/images/area.jpg",
-      summary:
-        "Comparte y recibe conocimiento para impulsar tu estrategia de marketing en nuestra comunidad de ideas.",
-    },
-    {
-      name: "Marketing6",
-      url: "/images/area.jpg",
-      summary:
-        "Comparte y recibe conocimiento para impulsar tu estrategia de marketing en nuestra comunidad de ideas.",
-    },
-    {
-      name: "Marketing7",
-      url: "/images/area.jpg",
-      summary:
-        "Comparte y recibe conocimiento para impulsar tu estrategia de marketing en nuestra comunidad de ideas.",
-    },
-    {
-      name: "Marketing8",
-      url: "/images/area.jpg",
-      summary:
-        "Comparte y recibe conocimiento para impulsar tu estrategia de marketing en nuestra comunidad de ideas.",
-    },
-    {
-      name: "Marketing9",
-      url: "/images/area.jpg",
-      summary:
-        "Comparte y recibe conocimiento para impulsar tu estrategia de marketing en nuestra comunidad de ideas.",
-    },
-  ];
+
 //TODO como hago para no estar pasando de argumento en argumento?
 interface Property {
     name: string;
@@ -79,18 +24,20 @@ interface Property {
     // Otras propiedades que puedan tener los objetos en el array
 }
 interface Properties {
-    properties: Property[];
+    properties?: Property[];
 }
 
 export function SwiperComponent({properties}:Properties) {
     
   return (
     <>
-      <Swiper
+      <Swiper className="flex" 
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         spaceBetween={50}
         slidesPerView={4}
+        autoHeight={true}
         navigation
+        
         pagination={{ clickable: true }}
         // autoplay={{
         //   delay: 1500,
@@ -114,10 +61,10 @@ export function SwiperComponent({properties}:Properties) {
           },
         }}
       >
-        {properties.map((property, index) => {
+        {properties?.map((property, index) => {
           return (
-            <SwiperSlide key={property.name}>
-              <AreasHomeItem {...property} />
+            <SwiperSlide key={property.name} >
+              <AreasHomeItem  {...property} />
             </SwiperSlide>
           );
         })}

@@ -10,7 +10,7 @@ interface Props {
 export default function AreasHomeItem({ name, url, summary }: Props) {
   return (
     <div className="max-w-xs bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 mx-auto">
-      <Image src={url} width={360} height={360} alt="logo" />
+      <Image src={url} width={360} height={360} alt="logo" className="h-72 object-cover"/>
 
       <div className="p-5">
         <h5 className="mb-2 text-2xl font-bold tracking-tight text-gray-900 dark:text-white">

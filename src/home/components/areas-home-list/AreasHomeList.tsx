@@ -13,7 +13,7 @@ interface Property {
 interface Props{
     subtitle: string;
     description: string;
-    properties: Property[];
+    properties?: Property[];
 }
 
 export function AreasHomeList({subtitle, description, properties}: Props ) {

@@ -1,14 +1,12 @@
-
 import CardItem from "../card-item/CardItem";
 
 import { Project } from "@/interfaces/project.interface";
-
-
-interface Props{
-  projects?: Project[]
- }
+import style from "./card-grid.module.css";
+interface Props {
+  projects?: Project[];
+}
 // const projects = [
- 
+
 //   {
 //     name: "proyecto1",
 //     description:
@@ -19,7 +17,7 @@ interface Props{
 //       { name: "AREA DE LOGÍSTICA" },
 //     ],
 //     members: [
-      
+
 //       {
 //         url: "/members/jairo.jpg",
 //       },
@@ -58,12 +56,12 @@ interface Props{
 //       },
 //     ],
 //   },
-  
+
 // ];
-async function CardGrid({projects}: Props) {
+async function CardGrid({ projects }: Props) {
   
   return (
-    <div className="grid lg:grid-cols-4 grid-cols-2 lg:w-48">
+    <div className={`grid grid-cols- md:grid-cols-2 gap-4 `}>
       {projects?.map((project) => {
         return <CardItem key={project.name} {...project} />;
       })}
