@@ -1,6 +1,7 @@
 'use client'
 
 import { Select as SelectNextUI, SelectItem } from "@nextui-org/react";
+import { useSearchParams } from "next/navigation";
 
 interface PropsOptions {
     label: string;
@@ -14,15 +15,19 @@ interface Props{
 }
 
 function Select({title, options, handle}: Props) {
-  
+  const searchParams = useSearchParams();
 //   const handleA= (e) => {
 // console.log(e)
 //   }
+const defaultArea = searchParams.get('area')?.toString()
+const defaultSelectedKeys = defaultArea ? [defaultArea] : undefined;
+console.log(defaultArea);
   return (
     <SelectNextUI 
         label={title} 
-        className="max-w-xs" 
-        
+        className="md:max-w-xs" 
+        variant = "bordered"
+        defaultSelectedKeys={defaultSelectedKeys}
         onChange={(e)=> {
           if (handle) {
             handle(e.target.value);

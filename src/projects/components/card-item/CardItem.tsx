@@ -24,15 +24,15 @@ interface Props {
 
 function CardItem({id, name, summary, description, url, areas, members }: Props) {
   return (
-    <div className="relative flex bg-clip-border rounded-xl bg-white text-gray-700 shadow-md  flex-row mx-2 my-4">
-      <div className="relative m-0 overflow-hidden text-gray-700 bg-white rounded-r-none bg-clip-border rounded-xl shrink-0 flex items-center">
+    <div className="shadow-xl relative flex bg-clip-border rounded-xl bg-white text-gray-700 flex-col md:flex-row  mx-2 my-4">
+      <div className=" relative m-0 overflow-hidden text-gray-700 bg-white rounded-r-none bg-clip-border rounded-xl shrink-0 flex items-center justify-center">
         <Image
           src={url}
           width={200}
-          height={100}
+          height={0}
           alt="area"
           className=" object-cover"
-          style={{ height: "230px" }}
+          style={{ height: "230px", width:'auto' }}
         />
       </div>
       <div className=" p-6 relative">

@@ -17,7 +17,7 @@ function GridParticipant({ members }: Props) {
           Para realizar este proyecto contamos con la ayuda de...
         </p>
       </div>
-      <div className="grid grid-cols-2 lg:grid-cols-4 md:grid-cols-3 mb-11">
+      <div className="grid grid-cols-1 lg:grid-cols-4 md:grid-cols-3 mb-11 justify-center">
         {members?.map((member) => {
           return <GridItemParticipant member={member} key={member.id} />;
         })}

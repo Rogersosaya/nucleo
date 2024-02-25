@@ -3,9 +3,10 @@ import prisma from "../../lib/prisma";
 
 interface SearchOptions {
   search?: string;
+  area?: string
   
 }
-export const getProjectsWithAreasSearch = async ({search}: SearchOptions) => {
+export const getProjectsWithAreasSearch = async ({search, area}: SearchOptions) => {
   try {
     
     const projects = await prisma.project.findMany({
@@ -31,7 +32,7 @@ export const getProjectsWithAreasSearch = async ({search}: SearchOptions) => {
         areas: {
             some: {
               area: {
-                name: {}
+                name: area ? area : {}
               }
             }
           }

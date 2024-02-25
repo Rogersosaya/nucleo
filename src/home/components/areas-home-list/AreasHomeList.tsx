@@ -4,6 +4,7 @@ import Subtitle from '@/components/subtitle/Subtitle';
 import { SwiperComponent } from '@/components/swiper/SwiperComponent';
 
 interface Property {
+  id: string;
     name: string;
     url:string;
     summary:string;

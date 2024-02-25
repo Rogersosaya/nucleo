@@ -23,8 +23,15 @@ function Search() {
     replace(`${pathname}?${params.toString()}`);
     console.log(params);
   }
-  function handleSelect(term: string){
-    console.log(term);
+  function handleSelect(termArea: string){
+    const params = new URLSearchParams(searchParams);
+    if (termArea) {
+      params.set('area', termArea);
+    } else {
+      params.delete('area');
+    }
+    replace(`${pathname}?${params.toString()}`);
+    console.log(params);
   }
   const areas = [
     {
@@ -63,7 +70,7 @@ function Search() {
   ];
   
   return (
-    <div className="flex w-full flex-wrap md:flex-nowrap gap-4 ">
+    <div className="flex w-full flex-wrap md:flex-nowrap gap-4 mt-6">
       <Input
         type="email"
         label="Buscar proyecto..."
@@ -74,7 +81,7 @@ function Search() {
         defaultValue={searchParams.get('query')?.toString()}
       />
       
-      <Select title="Seleccionar Área" options={areas} handle={handleSelect} />
+      <Select title="Seleccionar Área" options={areas} handle={handleSelect}  />
     </div>
   );
 }

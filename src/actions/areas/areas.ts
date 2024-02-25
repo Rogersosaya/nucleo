@@ -4,6 +4,7 @@ export const getAreas = async () => {
   try {
     const areas = await prisma.area.findMany({
       select: {
+        id: true,
         name: true,
         url: true,
         summary: true

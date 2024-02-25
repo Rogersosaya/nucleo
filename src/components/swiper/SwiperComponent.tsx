@@ -19,6 +19,7 @@ import  "./swiper.module.css";
 
 //TODO como hago para no estar pasando de argumento en argumento?
 interface Property {
+  id: string;
     name: string;
     url:string;
     summary:string;
@@ -34,7 +35,7 @@ export function SwiperComponent({properties}:Properties) {
     <>
       <Swiper style={{height: '100%'}}
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
-        spaceBetween={50}
+        spaceBetween={70}
         slidesPerView={4}
        
         navigation
