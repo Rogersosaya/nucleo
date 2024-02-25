@@ -104,7 +104,7 @@ export const initialData: SeedData = {
   areas: [
     {
       name: "Investigación",
-      url: "/area.jpg",
+      url: "/areas/investigacion.jpg",
       summary:
         "¡En la UNI, la investigación comienza desde el primer día! Te preparamos para brillar en la Feria de Proyectos con asesoramiento personalizado.",
       
@@ -154,7 +154,7 @@ export const initialData: SeedData = {
     },
     {
       name: "Project Management Office",
-      url: "/area.jpg",
+      url: "/areas/pmo.jpg",
       summary:
         "¡Haz que tus proyectos destaquen! Nos encargamos de gestionar, alinear y cultivar futuros éxitos. Únete a nuestro emocionante viaje de gestión de proyectos.",
       objectives: [
@@ -194,7 +194,7 @@ export const initialData: SeedData = {
     },
     {
       name: "Marketing",
-      url: "/area.jpg",
+      url: "/areas/marketing.jpg",
       summary:
         "¡Conéctate con nosotros! Fortalecemos nuestras redes sociales para aumentar seguidores y generar alianzas. Además, brindamos apoyo en diseño para eventos y proyectos.",
       
@@ -239,7 +239,7 @@ export const initialData: SeedData = {
     },
     {
       name: "Relaciones públicas",
-      url: "/area.jpg",
+      url: "/areas/rp.jpg",
       summary:
         "¡Conectamos oportunidades y cuidamos nuestra imagen! Gestionamos alianzas estratégicas y la Bolsa de Trabajo, asegurando beneficios para nuestros miembros.",
       
@@ -272,7 +272,7 @@ export const initialData: SeedData = {
     },
     {
       name: "Industrial",
-      url: "/area.jpg",
+      url: "/areas/industrial.jpg",
       summary:
         "Desarrollamos habilidades y abrimos puertas en ingeniería industrial. Eventos, programas y conexiones profesionales te esperan aquí.",
       
@@ -291,7 +291,7 @@ export const initialData: SeedData = {
     },
     {
       name: "Sistemas",
-      url: "/area.jpg",
+      url: "/areas/sistemas.jpg",
       summary:
         "Desarrollamos habilidades y abrimos puertas en ingeniería de sistemas. Eventos, programas y conexiones profesionales te esperan aquí.",
       
@@ -310,7 +310,7 @@ export const initialData: SeedData = {
     },
     {
       name: "Gestión de Talento Humano",
-      url: "/area.jpg",
+      url: "/areas/gth.jpg",
       summary:
         "Impulsamos la identificación y participación en nuestro centro, reclutando talentos y promoviendo un ambiente respetuoso y armonioso.",
       

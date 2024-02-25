@@ -1,8 +1,8 @@
 "use server";
 import prisma from "../../lib/prisma";
-export const getProjects = async () => {
+export const getAreas = async () => {
   try {
-    const projects = await prisma.project.findMany({
+    const areas = await prisma.area.findMany({
       select: {
         name: true,
         url: true,
@@ -11,8 +11,8 @@ export const getProjects = async () => {
     });
     
 
-    
-    return projects;
+   
+    return areas;
   } catch (error) {
     console.log(error);
   }

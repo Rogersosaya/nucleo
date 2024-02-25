@@ -9,6 +9,7 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/home/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/projects/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/project/**/*.{js,ts,jsx,tsx,mdx}",
     "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}"
   ],
   darkMode: "class",

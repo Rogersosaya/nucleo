@@ -1,10 +1,12 @@
 import React from "react";
 import Image from 'next/image';
-
+interface Testimonial {
+  content: string;
+}
 interface Props {
   name: string;
   role: string;
-  testimonial: string;
+  testimonial: Testimonial | null;
   url: string;
 }
 // TODO: la imagen de bob es la única q se tiene otro tamaño
@@ -24,7 +26,7 @@ function TestimonialItem({name, role, testimonial, url}: Props) {
       {role}
         </h6>
         <p className="mb-4">
-          {testimonial}
+          {testimonial?.content}
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 96 960 960"

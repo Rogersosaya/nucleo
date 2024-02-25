@@ -215,7 +215,7 @@ async function main() {
   });
 
   memberWithProject.forEach(async ({ member, project }) => {
-    // console.log(projectsMap[project], membersMap[member]);
+    
     await prisma.memberOnProject.create({
       data: {
         projectId: projectsMap[project],

@@ -20,9 +20,11 @@ export function AreasHomeList({subtitle, description, properties}: Props ) {
     
   return (
     <>
+      <div >
       <Subtitle subtitle={subtitle} description={description}/>
       <div className='mb-12'>
       <SwiperComponent properties={properties}/></div>
+      </div>
       
     </>
   );

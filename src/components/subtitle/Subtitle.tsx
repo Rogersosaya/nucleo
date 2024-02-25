@@ -1,8 +1,8 @@
 import React from "react";
 
 interface Props {
-  subtitle: string;
-  description: string;
+  subtitle?: string;
+  description?: string;
 }
 
 function Subtitle({ subtitle, description }: Props) {

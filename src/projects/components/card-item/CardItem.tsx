@@ -3,6 +3,7 @@ import Image from "next/image";
 import ButtonPrimary from "../../../components/buttons/ButtonPrimary";
 import { Area } from "@/interfaces/area.interface";
 import { Member } from "@/interfaces/member.interface";
+import Link from 'next/link';
 interface PropsMembers {
   url: string;
 }
@@ -10,6 +11,7 @@ interface PropsAreas {
   name: string;
 }
 interface Props {
+  id: string
   name: string;
   summary: string;
   description: string;
@@ -20,7 +22,7 @@ interface Props {
   // members: PropsMembers[];
 }
 
-function CardItem({ name, summary, description, url, areas, members }: Props) {
+function CardItem({id, name, summary, description, url, areas, members }: Props) {
   return (
     <div className="relative flex bg-clip-border rounded-xl bg-white text-gray-700 shadow-md  flex-row mx-2 my-4">
       <div className="relative m-0 overflow-hidden text-gray-700 bg-white rounded-r-none bg-clip-border rounded-xl shrink-0 flex items-center">
@@ -49,6 +51,7 @@ function CardItem({ name, summary, description, url, areas, members }: Props) {
 
         <h4 className="block mb-2 font-sans text-2xl antialiased font-semibold leading-snug tracking-normal text-blue-gray-900">
           {name}
+          
         </h4>
         <p className="block mb-3 font-sans text-base antialiased font-normal leading-relaxed text-gray-700">
           {summary}
@@ -74,7 +77,8 @@ function CardItem({ name, summary, description, url, areas, members }: Props) {
           )}
         </div>
         <div className="">
-          <ButtonPrimary>Ver más</ButtonPrimary>
+          <Link className="text-white bg-gradient-to-br from-purple-600 to-blue-500   focus:outline-none  font-medium rounded-lg text-sm px-5 py-2.5 text-center me-2 mb-2" href={`/projects/${id}`}>Ver más </Link>
+          {/* <ButtonPrimary >Ver más</ButtonPrimary> */}
         </div>
       </div>
     </div>

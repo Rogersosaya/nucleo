@@ -8,7 +8,9 @@ interface Props {
   text: string;
 }
 export function ActiveLink({ path, text }: Props) {
+  
   const pathName = usePathname();
+  
   return <Link href={ path } className={`  mx-6 ${ style.link } ${ (pathName === path) && style['active-link'] }`}>{
 text
 }</Link>;

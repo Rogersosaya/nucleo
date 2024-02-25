@@ -2,8 +2,10 @@ import React from "react";
 import TestimonialItem from "./TestimonialItem";
 import { TestimonialSwiper } from "./TestimonialSwiper";
 import Subtitle from "@/components/subtitle/Subtitle";
+import { getMembersWithTestimonial } from "@/actions/projects/membersWithTestimonial";
 
-function Testimonial() {
+async function Testimonial() {
+  const testimonials = await getMembersWithTestimonial();
   return (
     <div>
       <Subtitle
@@ -11,7 +13,7 @@ function Testimonial() {
         description="Esto es lo que dicen algunas personas de nosotros..."
       />
 
-      <TestimonialSwiper />
+      <TestimonialSwiper testimonials={testimonials}/>
     </div>
   );
 }

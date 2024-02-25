@@ -7,6 +7,7 @@ export const getProjectsWithAreas = async () => {
         areas: { include: { area: true } },
         members: { include: { member: true } },
       },
+      
     });
     const result = projects.map((project) => {
       return { ...project, areas: project.areas.map((area) => area.area),members: project.members.map((member) => member.member) };

@@ -14,6 +14,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 import "swiper/css/autoplay";
 import AreasHomeItem from "@/home/components/areas-home-list/AreasHomeItem";
+import  "./swiper.module.css";
 
 
 //TODO como hago para no estar pasando de argumento en argumento?
@@ -31,13 +32,12 @@ export function SwiperComponent({properties}:Properties) {
     
   return (
     <>
-      <Swiper className="flex" 
+      <Swiper style={{height: '100%'}}
         modules={[Navigation, Pagination, Scrollbar, A11y, Autoplay]}
         spaceBetween={50}
         slidesPerView={4}
-        autoHeight={true}
+       
         navigation
-        
         pagination={{ clickable: true }}
         // autoplay={{
         //   delay: 1500,
@@ -63,7 +63,7 @@ export function SwiperComponent({properties}:Properties) {
       >
         {properties?.map((property, index) => {
           return (
-            <SwiperSlide key={property.name} >
+            <SwiperSlide style={{height: 'auto'}}    key={property.name} >
               <AreasHomeItem  {...property} />
             </SwiperSlide>
           );

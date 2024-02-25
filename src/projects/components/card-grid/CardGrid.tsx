@@ -1,4 +1,6 @@
+
 import CardItem from "../card-item/CardItem";
+
 
 import { Project } from "@/interfaces/project.interface";
 import style from "./card-grid.module.css";
@@ -60,7 +62,7 @@ interface Props {
 // ];
 async function CardGrid({ projects }: Props) {
   
-  return (
+  return (    
     <div className={`grid grid-cols- md:grid-cols-2 gap-4 `}>
       {projects?.map((project) => {
         return <CardItem key={project.name} {...project} />;
