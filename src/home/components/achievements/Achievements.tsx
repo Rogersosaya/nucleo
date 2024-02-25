@@ -1,5 +1,5 @@
 import React from "react";
-import AchievementItem from "./AchievementItem";
+
 import CardAnimate from "../../../components/card-animate/CardAnimate";
 import Subtitle from '@/components/subtitle/Subtitle';
 
