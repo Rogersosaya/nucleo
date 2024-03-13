@@ -32,6 +32,8 @@ un component "use client" puede tener como hijos server components pero no impor
 6. Correr las migraciones de Prisma ```npx prisma migrate dev``` 
 7. ejecutar seed ```npm run seed```
 5. Correr el proyecto ```npm run dev```
+8. Correr proyecto en otro puerto ```npm run dev -- -p 4000
+```
 //TODO relacion polimórfica para la imagenes
 
 

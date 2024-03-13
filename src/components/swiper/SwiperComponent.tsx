@@ -70,11 +70,7 @@ export function SwiperComponent({properties}:Properties) {
           );
         })}
       </Swiper>
-      {/* <div className="flex flex-wrap">
-          {areas.map((area) => {
-            return <AreasHomeItem key={area.name} />;
-          })}
-        </div> */}
+      
     </>
   );
 }

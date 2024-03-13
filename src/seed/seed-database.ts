@@ -15,7 +15,7 @@ async function main() {
   const { members, areas, projects } = initialData;
 
   
-  
+// relación de uno a uno o uno a muchos
   for (const area of areas) {
     const { subareas, objectives, tasks, ...rest } = area;
     const areaDB = await prisma.area.create({
