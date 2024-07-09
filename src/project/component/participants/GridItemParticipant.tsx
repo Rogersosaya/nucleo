@@ -7,7 +7,7 @@ interface Props{
 function GridItemParticipant({member}: Props) {
     console.log(member)
   return (
-    <div className="mb-7 w-full max-w-sm bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700">
+    <div className="mb-7 mx-9 bg-white border border-gray-200 rounded-lg shadow dark:bg-gray-800 dark:border-gray-700 pt-3">
       
       <div className="flex flex-col items-center pb-10 px-2 shadow-xl">
         <Image src={member.url} width={100} height={100} alt="imagen" />

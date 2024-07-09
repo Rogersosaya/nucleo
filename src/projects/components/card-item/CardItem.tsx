@@ -29,10 +29,10 @@ function CardItem({id, name, summary, description, url, areas, members }: Props)
         <Image
           src={url}
           width={200}
-          height={0}
+          height={200}
           alt="area"
-          className=" object-cover"
-          style={{ height: "230px", width:'auto' }}
+          className=" object-cover ml-0 mt-4 md:ml-7 md:mt-0"
+          style={{ height: "230px", width:'200px' }}
         />
       </div>
       <div className=" p-6 relative">

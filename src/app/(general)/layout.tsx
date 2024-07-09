@@ -8,7 +8,7 @@ export default function GeneralLayout({
   return (
     <>
       <NavBar></NavBar>
-      <main >
+      <main className='mt-20'>
         { children }
       </main>
     </>

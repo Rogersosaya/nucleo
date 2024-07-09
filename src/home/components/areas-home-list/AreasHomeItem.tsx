@@ -11,7 +11,7 @@ interface Props {
 }
 export default function AreasHomeItem({id, name, url, summary }: Props) {
   return (
-    <div className="max-w-xs bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700 mx-auto h-full flex flex-col justify-between shadow-2xl m-3  px-2">
+    <div className="max-w-xs bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700 mx-auto h-full flex flex-col justify-between shadow-2xl m-3  px-6">
       <div className="">
         <Image
           src={url}
@@ -29,7 +29,7 @@ export default function AreasHomeItem({id, name, url, summary }: Props) {
           {summary}
         </p>
       </div>
-      <div className="text-center mb-9">
+      <div className="text-center mb-4">
       
       
       </div>

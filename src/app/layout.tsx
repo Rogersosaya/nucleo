@@ -20,7 +20,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html className="bg-zinc-200" lang="en">
       <body className={`${inter.className}  ${style.container}`}>
         <Providers >{children}</Providers>
       </body>
